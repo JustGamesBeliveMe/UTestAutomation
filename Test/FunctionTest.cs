@@ -5,10 +5,8 @@ using System;
 
 namespace UTestAutomation
 {
-    public class FunctionalTests : DriverHelper
+    public class FunctionalTests : BasePage
     {
-        //public IWebDriver Driver;
-
         [SetUp]
         public void Setup()
         {

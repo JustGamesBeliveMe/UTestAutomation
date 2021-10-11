@@ -6,7 +6,7 @@ using System.Text;
 
 namespace UTestAutomation
 {
-    public class CommonAction : DriverHelper
+    public class CommonAction : BasePage
     {
         public static void SelectDropdownListValue(IWebElement dropDownList, string selectValue)
         {
