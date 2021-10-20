@@ -7,7 +7,7 @@ using System.Text;
 
 namespace UTestAutomation 
 {
-    class Step1page : DriverHelper
+    class Step1page : BasePage
     {
         
         IWebElement TxtUserName     = Driver.FindElement(By.Id("firstName"));
@@ -49,6 +49,8 @@ namespace UTestAutomation
         }
         public void VerifyErrorMessageDisplay(out bool result)
         {
+            By Id = By.Id("emailError");
+            WaitForElement(Id);
             string errorMessage = "Enter valid email";
             result = false;
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
